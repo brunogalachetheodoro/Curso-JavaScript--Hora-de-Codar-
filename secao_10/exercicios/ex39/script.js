@@ -6,7 +6,7 @@ class Carro {
         this. gasolinaRestante = gasolinaRestante;
     }
 
-    menosGas() {
+    menosGas(km) {
         this.gasolinaRestante -= 1
         console.log('O carro consumiu 1 litro')
     }
