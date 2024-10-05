@@ -1,26 +1,16 @@
-//aceita tudo
-const pontoRegex = /./
+//busca algum dos caracteres dentro do test
 
-console.log(pontoRegex.test('5415'));
-console.log(pontoRegex.test('asdasd'))
-console.log(pontoRegex.test('@#$dashjdbhsgajh522'));
-console.log(pontoRegex.test (' '));
+const reg1 = /[12345]/;
 
-//aceita qualquer digito (número)
+console.log(reg1.test('temos o número 6'))
+console.log(reg1.test('temos o número 5'))
+console.log(reg1.test('temos o número 25')) //aqui retorna true (um erro), pois não é o número que estamos buscando
 
-const dRegex = /\d/;
-console.log(dRegex.test('5415'));
-console.log(dRegex.test('asdasd'))
-console.log(dRegex.test('@#$dashjdbhsgajh522'));
-console.log(dRegex.test (' '));
+//neste exemplo caso haja algum número entre 0 a 9 retornará o valor true
 
-// não aceita número
+const reg2 = /[0-9]/
 
-const dRegex2 = /\D/;
-console.log(dRegex2.test('5415'));
-console.log(dRegex2.test('asdasd'))
-console.log(dRegex2.test('@#$dashjdbhsgajh522'));
-console.log(dRegex2.test (' '));
-
+console.log(reg2.test('números 45343546354102231'))
+console.log(reg2.test('sem números'))
 
 

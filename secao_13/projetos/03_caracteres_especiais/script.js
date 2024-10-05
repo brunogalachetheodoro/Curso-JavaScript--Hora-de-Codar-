@@ -1,16 +1,52 @@
-//busca algum dos caracteres dentro do test
+//aceita tudo
+const pontoRegex = /./
 
-const reg1 = /[12345]/;
+console.log('.');
+console.log(pontoRegex.test('5415'));
+console.log(pontoRegex.test('asdasd'))
+console.log(pontoRegex.test('@#$dashjdbhsgajh522'));
+console.log(pontoRegex.test (' '));
+console.log(' ');
+//aceita qualquer digito (número)
 
-console.log(reg1.test('temos o número 6'))
-console.log(reg1.test('temos o número 5'))
-console.log(reg1.test('temos o número 25')) //aqui retorna true (um erro), pois não é o número que estamos buscando
+const dRegex = /\d/;
+console.log('d');
+console.log(dRegex.test('5415'));
+console.log(dRegex.test('asdasd'))
+console.log(dRegex.test('@#$dashjdbhsgajh522'));
+console.log(dRegex.test (' '));
+console.log(' ');
 
-//neste exemplo caso haja algum número entre 0 a 9 retornará o valor true
 
-const reg2 = /[0-9]/
+// não aceita número
 
-console.log(reg2.test('números 45343546354102231'))
-console.log(reg2.test('sem números'))
+const dRegex2 = /\D/;
+console.log('D');
+console.log(dRegex2.test('5415'));
+console.log(dRegex2.test('asdasd'))
+console.log(dRegex2.test('@#$dashjdbhsgajh522'));
+console.log(dRegex2.test (' '));
+console.log(' ');
+
+// apenas onde há espaços
+
+const sRegex = /\s/;
+console.log('s');
+console.log(sRegex.test('5415'));
+console.log(sRegex.test('asda sd'))
+console.log(sRegex.test('@#$dashjdbhsgajh522'));
+console.log(sRegex.test (' '));
+console.log(' ');
+
+//só aceita alfanuméricos
+
+const wRegex = /\w/;
+console.log('s');
+console.log(wRegex.test('5415'));
+console.log(wRegex.test('asda sd'))
+console.log(wRegex.test('@#$dashjdbhsgajh522'));
+console.log(wRegex.test (' '));
+console.log(' ');
+
 
 
