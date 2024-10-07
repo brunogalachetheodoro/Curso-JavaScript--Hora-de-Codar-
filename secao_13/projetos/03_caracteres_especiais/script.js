@@ -7,6 +7,7 @@ console.log(pontoRegex.test('asdasd'))
 console.log(pontoRegex.test('@#$dashjdbhsgajh522'));
 console.log(pontoRegex.test (' '));
 console.log(' ');
+
 //aceita qualquer digito (número)
 
 const dRegex = /\d/;
